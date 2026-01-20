@@ -1,0 +1,17 @@
+
+<h1>Ajouter une recette</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Titre :</label><br>
+    <input type="text" name="title"><br><br>
+
+    <label>Ingrédients :</label><br>
+    <textarea name="ingredients"></textarea><br><br>
+
+    <label>Instructions :</label><br>
+    <textarea name="instructions"></textarea><br><br>
+
+    <button type="submit">Enregistrer</button>
+</form>

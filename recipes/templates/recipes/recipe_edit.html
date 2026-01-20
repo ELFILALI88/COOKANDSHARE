@@ -1,0 +1,17 @@
+
+<h2>Modifier la recette</h2>
+
+<form method="POST">
+  {% csrf_token %}
+
+  <label>Titre</label><br>
+  <input type="text" name="title" value="{{ recipe.title }}"><br><br>
+
+  <label>Ingrédients</label><br>
+  <textarea name="ingredients">{{ recipe.ingredients }}</textarea><br><br>
+
+  <label>Instructions</label><br>
+  <textarea name="instructions">{{ recipe.instructions }}</textarea><br><br>
+
+  <button type="submit">Modifier</button>
+</form>

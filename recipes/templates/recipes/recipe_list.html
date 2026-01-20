@@ -1,0 +1,17 @@
+
+<a href="{% url 'add_recipe' %}">➕ Ajouter une recette</a>
+
+<h1>Liste des recettes</h1>
+<ul>
+  {% for recipe in recipes %}
+    {% if recipe.id %}
+      <li>
+        <a href="{% url 'recipe_detail' recipe.id %}">
+          {{ recipe.title }}
+        </a>
+      </li>
+    {% endif %}
+  {% empty %}
+    <li>Aucune recette pour le moment.</li>
+  {% endfor %}
+</ul>
