@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recherche</title>
+</head>
+<body>
+    <h1>Recherche des recettes</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Chercher une recette" value="{{ query }}">
+        <button type="submit">Rechercher</button>
+    </form>
+
+    <hr>
+
+    {% for recipe in recipes %}
+        <p>{{ recipe.title }}</p>
+    {% empty %}
+        <p>Aucune recette trouvée</p>
+    {% endfor %}
+</body>
+</html>
