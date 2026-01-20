@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -60,3 +61,33 @@ def recipe_delete(request, id):
         return redirect('recipe_list')
 
     return render(request, 'recipes/recipe_confirm_delete.html', {'recipe': recipe})
+=======
+from django.shortcuts import render
+from .models import Recipe
+from django.contrib.auth.models import User
+from django.db.models import Q
+
+def search_recipes(request):
+    query = request.GET.get('q')
+    author_id = request.GET.get('author')
+
+    recipes = Recipe.objects.all()
+    authors = User.objects.all()
+
+    if query:
+        recipes = recipes.filter(
+            Q(title__icontains=query) |
+            Q(ingredients__icontains=query)
+        )
+
+    if author_id:
+        recipes = recipes.filter(author__id=author_id)
+
+    context = {
+        'recipes': recipes,
+        'authors': authors,
+        'query': query,
+        'author_id': author_id,
+    }
+    return render(request, 'recipes/search.html', context)
+>>>>>>> 51441947e05d0a2ef62c62bfaef66c1a2a6ca0ae

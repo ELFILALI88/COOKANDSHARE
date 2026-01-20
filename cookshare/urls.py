@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+<<<<<<< HEAD
 
 
 urlpatterns = [
@@ -23,4 +24,10 @@ urlpatterns = [
 
     path('', include('recipes.urls')),
 
+=======
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('recipes.urls')),
+>>>>>>> 51441947e05d0a2ef62c62bfaef66c1a2a6ca0ae
 ]
