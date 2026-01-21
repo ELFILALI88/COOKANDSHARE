@@ -19,17 +19,25 @@ def recipe_detail(request, id):
     return render(request, 'recipes/recipe_detail.html', {'recipe': recipe})
 
 
-# ➕ Ajouter une recette (TA TÂCHE – MEMBRE 2)
+# ➕ Ajouter une recette 
 @login_required
 def add_recipe(request):
     if request.method == "POST":
-        Recipe.objects.create(
+        # Crée un objet Recipe sans encore le sauvegarder
+        recipe = Recipe(
             title=request.POST['title'],
             ingredients=request.POST['ingredients'],
             instructions=request.POST.get('instructions', ''),
             author=request.user
         )
-        return redirect('recipe_list')
+
+        # Sauvegarder l'image si l'utilisateur en a choisi une
+        if 'image' in request.FILES:
+            recipe.image = request.FILES['image']
+
+        recipe.save()  # Sauvegarde définitive dans la base
+        messages.success(request, "Recette ajoutée avec succès")
+        return redirect('recipe_detail', id=recipe.id)
 
     return render(request, 'recipes/recipe_form.html')
 
@@ -39,13 +47,20 @@ def add_recipe(request):
 def recipe_edit(request, id):
     recipe = get_object_or_404(Recipe, id=id)
 
+    # 🔐 Sécurité : seul l’auteur peut modifier
     if recipe.author != request.user:
+        messages.error(request, "Vous n'êtes pas autorisé(e) à modifier cette recette.")
         return redirect('recipe_list')
 
     if request.method == 'POST':
         recipe.title = request.POST['title']
         recipe.ingredients = request.POST['ingredients']
         recipe.instructions = request.POST.get('instructions', '')
+
+        # 🔄 Mettre à jour l'image si l'utilisateur en a choisi une nouvelle
+        if 'image' in request.FILES:
+            recipe.image = request.FILES['image']
+
         recipe.save()
         messages.success(request, "Recette modifiée avec succès")
         return redirect('recipe_detail', id=recipe.id)
@@ -69,7 +84,8 @@ def recipe_delete(request, id):
     return render(request, 'recipes/recipe_confirm_delete.html', {'recipe': recipe})
 
 
-# 🔍 Recherche (TÂCHE MEMBRE 4 — CONSERVÉE)
+
+# 🔍 Recherche 
 def search_recipes(request):
     query = request.GET.get('q')
     author_id = request.GET.get('author')

@@ -1,20 +1,18 @@
-
-
-<a href="{% url 'add_recipe' %}">➕ Ajouter une recette</a>
-
 <h1>Liste des recettes</h1>
+<a href="{% url 'add_recipe' %}">➕ Ajouter une recette</a>
 <ul>
   {% for recipe in recipes %}
-    {% if recipe.id %}
-      <li>
-        <a href="{% url 'recipe_detail' recipe.id %}">
-          {{ recipe.title }}
-        </a>
-      </li>
-    {% endif %}
+    <li>
+      <a href="{% url 'recipe_detail' recipe.id %}">
+        {{ recipe.title }}
+      </a>
+      {% if recipe.image %}
+        <br>
+        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" width="100">
+      {% endif %}
+    </li>
   {% empty %}
     <li>Aucune recette pour le moment.</li>
   {% endfor %}
 </ul>
-
 <a href="{% url 'search_recipes' %}">🔍 Rechercher une recette</a>

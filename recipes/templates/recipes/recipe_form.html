@@ -1,17 +1,21 @@
 
 <h1>Ajouter une recette</h1>
 
-<form method="post">
-    {% csrf_token %}
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
 
-    <label>Titre :</label><br>
-    <input type="text" name="title"><br><br>
+  <label>Titre</label><br>
+  <input type="text" name="title" value="{{ recipe.title }}"><br><br>
 
-    <label>Ingrédients :</label><br>
-    <textarea name="ingredients"></textarea><br><br>
+  <label>Ingrédients</label><br>
+  <textarea name="ingredients">{{ recipe.ingredients }}</textarea><br><br>
 
-    <label>Instructions :</label><br>
-    <textarea name="instructions"></textarea><br><br>
+  <label>Instructions</label><br>
+  <textarea name="instructions">{{ recipe.instructions }}</textarea><br><br>
 
-    <button type="submit">Enregistrer</button>
+  <label>Image</label><br>
+  <input type="file" name="image"><br><br>
+
+  <button type="submit">Enregistrer</button>
 </form>
+

@@ -1,5 +1,11 @@
 <h1>{{ recipe.title }}</h1>
 
+{% if recipe.image %}
+  <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" style="max-width:300px;">
+{% else %}
+  <p>Aucune image disponible</p>
+{% endif %}
+
 <p><strong>Ingrédients :</strong></p>
 <p>{{ recipe.ingredients }}</p>
 
@@ -8,13 +14,9 @@
 
 <p><strong>Auteur :</strong> {{ recipe.author }}</p>
 
-<br>
 <a href="{% url 'recipe_list' %}">⬅ Retour à la liste</a>
 
 {% if recipe.author == user %}
   <a href="{% url 'recipe_edit' recipe.id %}">Modifier</a>
   <a href="{% url 'recipe_delete' recipe.id %}">Supprimer</a>
 {% endif %}
-<hr>
-
-
