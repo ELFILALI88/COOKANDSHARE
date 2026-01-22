@@ -12,7 +12,7 @@ from .models import Profile
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['photo']
+        fields = ['image'] 
 
 
 from django.contrib.auth.forms import UserCreationForm

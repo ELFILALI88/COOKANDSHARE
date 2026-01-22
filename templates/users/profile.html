@@ -4,16 +4,20 @@
 
 <h1> Mon Profil</h1>
 
-<img src=" user.profile.image.c:\Users\hp\OneDrive\Pictures\Saved Pictures\2d12a68b5cc44d3e9f6139b8d2a75c76.jpg "  
- 
- 
-      class="profile-image"   style= " width: 150px; 
-            height: 150px;     
-            border-radius: 50%
+
+{% if user.profile.image %}
+    <img src="{{ user.profile.image.url }}" class="profile-image" style="width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
             object-fit: cover; 
             border: 3px solid #e0e0e0; 
             margin-bottom: 20px; 
-            background-color: #ddd; " >
+            background-color: #ddd;">
+{% else %}
+    <div >
+        <span>Pas de photo</span>
+    </div>
+{% endif %}
 
 
 <p><strong>Username :</strong> {{ user.username }}</p>

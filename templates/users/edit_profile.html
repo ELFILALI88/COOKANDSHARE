@@ -1,25 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div class="container">
+    <h1>Modifier le profil</h1>
 
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <h3>Informations personnelles</h3>
+        {{ user_form.as_p }}
+        
+        <h3>Photo de profil</h3>
+        {{ profile_form.as_p }}
 
-<h1>Modifier le profil</h1>
+        <div class="buttons">
+            <button type="submit">Enregistrer les modifications</button>
+            
+            <a href="{% url 'profile' %}" class="btn-cancel">Annuler</a>
+        </div>
+    </form>
+</div>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-</form>
-
-
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ user_form.as_p }}
-    {{ profile_form.as_p }}
-
-<a href="{% url 'profile' %}">
-    <button type="submit">Annuler</button>
-</a>
-
-    <button type="submit">Enregistrer</button>
-</form>
 {% endblock %}
