@@ -35,3 +35,11 @@ urlpatterns = [
 # 🔹 Permet à Django de servir les fichiers médias en mode DEBUG
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
+from django.urls import include
+
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
