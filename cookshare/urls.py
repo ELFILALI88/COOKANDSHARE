@@ -5,8 +5,11 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
+ 
     path('admin/', admin.site.urls),
-    path('', include('recipes.urls')),  # tes URLs de l'app recipes
+    path('', include('recipes.urls')), 
+    
+    
     # Users
     path('users/', include('users.urls')),
 
@@ -20,26 +23,14 @@ urlpatterns = [
         auth_views.LogoutView.as_view(),
         name='logout'
     ),
-
-    path(
-    'password/change/',
-    auth_views.PasswordChangeView.as_view(
+    
+    # changement password
+    path('password/change/', auth_views.PasswordChangeView.as_view(
         template_name='users/password_change.html',
         success_url='/users/profile/'
-    ),
-    name='password_change'
-),
-
+    ), name='password_change'),
 ]
 
 # 🔹 Permet à Django de servir les fichiers médias en mode DEBUG
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
-
-from django.urls import include
-
-urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
-]

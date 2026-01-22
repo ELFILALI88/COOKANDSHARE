@@ -4,22 +4,26 @@ from django.contrib import messages
 from .forms import UserUpdateForm, ProfileUpdateForm
 from recipes.models import Recipe
 from .forms import UserRegisterForm
-
+from django.contrib.auth import login
 # --------------------
 # INSCRIPTION
 # --------------------
 
 
 def register(request):
+    # SI l'utilisateur est déjà connecté, on l'envoie direct à l'accueil
+    if request.user.is_authenticated:
+        return redirect('recipe_list')
+
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            form.save()
-            messages.success(request, "Compte créé avec succès")
-            return redirect('login')
+            user = form.save()
+            login(request, user)
+            messages.success(request, f"Bienvenue {user.username} !")
+            return redirect('recipe_list')
     else:
         form = UserRegisterForm()
-
     return render(request, 'users/register.html', {'form': form})
 
 # --------------------
