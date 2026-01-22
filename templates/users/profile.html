@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1> Mon Profil</h1>
+
+<img src=" user.profile.image.c:\Users\hp\OneDrive\Pictures\Saved Pictures\2d12a68b5cc44d3e9f6139b8d2a75c76.jpg "  
+ 
+ 
+      class="profile-image"   style= " width: 150px; 
+            height: 150px;     
+            border-radius: 50%
+            object-fit: cover; 
+            border: 3px solid #e0e0e0; 
+            margin-bottom: 20px; 
+            background-color: #ddd; " >
+
+
+<p><strong>Username :</strong> {{ user.username }}</p>
+
+<p><strong>Email :</strong> {{ user.email }}</p>
+
+
+<div class="profile-actions">
+
+    <a href="{% url 'edit_profile' %}">
+        <button type="button">Modifier le profil</button>
+    </a>
+
+    <a href="{% url 'password_change' %}">
+        <button type="button">Changer mot de passe</button>
+    </a>
+
+    <a href="{% url 'delete_account' %}">
+        <button type="button" class="danger">
+            Supprimer mon compte
+        </button>
+    </a>
+
+</div>
+
+<hr>
+
+<div class="logout-section">
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="logout">
+            Déconnexion
+        </button>
+    </form>
+</div>
+
+
+
+
+
+<h2>Mes recettes</h2>
+
+{% if recipes %}
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                <a href="{% url 'recipe_detail' recipe.id %}">
+                    {{ recipe.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucune recette pour le moment.</p>
+{% endif %}
+
+
+
+{% endblock %}

@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
 <h1>Liste des recettes</h1>
 <a href="{% url 'add_recipe' %}">➕ Ajouter une recette</a>
 <ul>
@@ -16,3 +20,4 @@
   {% endfor %}
 </ul>
 <a href="{% url 'search_recipes' %}">🔍 Rechercher une recette</a>
+{% endblock %}

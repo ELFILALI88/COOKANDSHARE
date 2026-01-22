@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<h2>Supprimer le compte</h2>
+
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirmer suppression</button>
+</form>
+
+<a href="{% url 'profile' %}">
+    <button type="submit">Annuler</button>
+</a>
+
+
+
+{% endblock %}
