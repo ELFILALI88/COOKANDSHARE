@@ -1,0 +1,2583 @@
+/* Global */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Search bar */
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.search-box input,
+.search-box select {
+    border-radius: 8px;
+}
+
+/* Button */
+.btn-search {
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-search:hover {
+    background-color: #084298;
+}
+
+/* Recipe card */
+.recipe-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card .card-body {
+    padding: 15px;
+}
+
+.recipe-card h5 {
+    font-weight: bold;
+}
+
+/* Author badge */
+.author {
+    font-size: 14px;
+    color: #6c757d;
+}
+body {
+    background-color: #f6f6f6;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(90deg, #ff9800, #ffb74d);
+}
+
+.navbar a {
+    color: white !important;
+    font-weight: 500;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.search-bar input {
+    border-radius: 30px;
+    padding: 12px 20px;
+}
+
+.search-bar button {
+    border-radius: 30px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+}
+
+.search-bar button:hover {
+    background-color: #fb8c00;
+}
+
+/* CARD */
+.recipe-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE VERTICALE */
+.recipe-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* TITLE */
+.recipe-card h5 {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* BUTTON */
+.btn-orange {
+    background-color: #ff9800;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 18px;
+    margin-top: 10px;
+}
+
+.btn-orange:hover {
+    background-color: #fb8c00;
+}
+.recipe-card img {
+    width: 100%;
+    height: 300px;       /* كانت 260 */
+    object-fit: cover;
+    border-radius: 18px;
+}
+.recipe-card h5 {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.recipe-card {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.recipe-card img {
+    width: 90%;          /* ⬅️ كانت 100% */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 0 auto;      /* ⬅️ توسيط الصورة */
+    display: block;
+}
+.recipe-card img {
+    width: 85%;          /* خليها كيف ما درنا */
+    height: 240px;       /* ⬅️ كانت 300px */
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 0 auto;
+    display: block;
+}
+.search-page {
+    padding: 30px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-form input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background: orange;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+/* GRID */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+/* CARD */
+.recipe-card {
+    background: white;
+    padding: 16px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.recipe-card img {
+    width: 100%;
+    max-width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 0 auto 12px;
+    display: block;
+}
+
+.recipe-card h3 {
+    margin: 10px 0;
+}
+
+.recipe-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: orange;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+/* ====== SEARCH PAGE ====== */
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.recipe-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 170px;        /* ⬅⬅ هنا نقصنا الطول */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.recipe-card h3 {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.recipe-card .btn {
+    display: inline-block;
+    background: orange;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* =========================
+   RECIPE DETAIL PAGE
+========================= */
+
+.recipe-detail-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.recipe-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.recipe-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.recipe-image-wrapper img {
+    width: 70%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.recipe-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.recipe-card h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ff9800;
+}
+
+.ingredients-list,
+.instructions-list {
+    padding-left: 20px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.ingredients-list li,
+.instructions-list li {
+    margin-bottom: 8px;
+}
+
+.recipe-author {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #555;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: #e68900;
+}
+.recipe-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.recipe-image-wrapper img {
+    width: 40%;        /* نقصها أكثر إلا بغيتي: 60% ولا 50% */
+    max-width: 500px;  /* حد أقصى باش ما تكبرش بزاف */
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.recipes-container {
+    display: flex;
+    justify-content: center;   /* 🔥 يخليها فالوسط */
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.recipe-card {
+    background: #fff;
+    border-radius: 25px;
+    padding: 25px;
+    width: 320px;
+    text-align: center;        /* النص والصورة فالوسط */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.recipe-card img {
+    width: 85%;
+    max-width: 240px;
+    border-radius: 18px;
+    margin: 0 auto 15px;       /* 🔥 الصورة فالوسط */
+    display: block;
+}
+
+.recipe-card h3 {
+    color: #ff9800;
+    margin: 15px 0;
+}
+
+.recipe-card .btn {
+    background: #ff9800;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+.page-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+.page-title {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.search-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+.search-form button {
+    background: #ffa500;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.recipes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.recipe-card {
+    background: white;
+    width: 320px;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.recipe-card img {
+    width: 85%;
+    max-width: 240px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+.recipe-card h3 {
+    color: #ff9800;
+    margin: 15px 0;
+}
+
+.btn-recipe {
+    display: inline-block;
+    background: #ffa500;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+.recipe-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.recipe-image-wrapper img {
+    width: 380px;        /* صغّرتها شوية */
+    max-width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.recipe-card {
+    max-width: 700px;
+    margin: 40px auto;   /* ← هادي هي السر */
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    text-align: center;
+}
+.ingredients-list,
+.instructions-list {
+    list-style-position: inside;
+    padding: 0;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.instructions-list li {
+    margin-bottom: 15px;
+}
+.ingredients-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.ingredients-list li {
+    margin: 12px 0;
+    font-size: 18px;
+    position: relative;
+}
+.ingredients-list {
+    list-style: disc;
+    list-style-position: outside;
+    width: fit-content;
+    margin: 20px auto;   /* يجي فالوسط */
+    padding-left: 25px;  /* المسافة بين النقطة والنص */
+}
+
+.ingredients-list li {
+    font-size: 18px;
+    margin: 14px 0;
+    text-align: left;    /* النص يبقى مستقيم */
+}
+.recipe-card {
+    padding: 25px 30px;   /* كان كبير → نقصناه */
+}
+.ingredients-list li {
+    margin: 8px 0;        /* كان 14px */
+    font-size: 17px;
+}
+.instructions-list li {
+    margin-bottom: 10px;
+    line-height: 1.4;     /* نقص المسافة بين السطور */
+}
+.recipe-card h3 {
+    margin-bottom: 15px;
+}
+/* container ديال الكارتات */
+.recipes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* الكارت */
+.recipe-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+/* الصورة صغيرة ووسط */
+.recipe-card img {
+    width: 100%;
+    height: 160px;          /* 👈 صغّرنا الطول */
+    object-fit: cover;      /* ما تتشوّهش */
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* العنوان */
+.recipe-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333333;
+}
+
+/* الزر */
+.btn-recipe {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 18px;
+    background: #ffa500;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+/* عناوين Ingrédients و Instructions */
+.section-title {
+    color: #ff9800;   /* برتقالي */
+    font-weight: bold;
+}
+.recipe-detail-image {
+    width: 100%;
+    max-width: 250px;   /* 👈 هنا كتحكم فالحجم */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    display: block;
+    margin: 0 auto 30px;
+}
+.recipe-detail img {
+    height: 250px;     /* نقص أو زيد حسب بغيتك */
+    width: auto;       /* باش ما تتعوجش */
+    object-fit: cover; /* باش تبقى مزيانة */
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+}
+.recipe-detail img {
+    height: 220px;        /* نقص الطول */
+    width: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto 20px;  /* نقص المسافة لتحت */
+}
+.recipe-image-wrapper {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* 🔽 هادي هي اللي كتحدد الحجم 🔽 */
+.recipe-image-wrapper img {
+    width: 200px;      /* بدّلها: 200px / 250px / 300px */
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.recipe-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.recipe-image-wrapper img {
+    width: 400px;          /* عريضة */
+    height: 200px;         /* الطول ناقص */
+    object-fit: cover;     /* مهم بزاف باش ما تتشوهش */
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+.recipe-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #222;
+}
+.section-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #ff8c42;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ingredients-list li,
+.instructions-list li {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.recipe-card {
+    background: #fff;
+    padding: 30px;
+    max-width: 650px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+.recipe-card {
+    background: #fff;
+    padding: 28px;
+    max-width: 650px;
+    margin: 15px auto;   /* كان كبير، نقصناه */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+.recipe-title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1f2937;
+    letter-spacing: 1px;
+}
+.recipe-image-wrapper {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+}
+
+.recipe-image {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* ❤️ LIKE overlay */
+.like-form {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.like-btn {
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.like-btn:hover {
+    background: rgba(255,0,0,0.85);
+}
+.recipe-image-wrapper {
+    position: relative;
+    width: 700px;
+    margin: 20px auto;
+}
+
+.recipe-image {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+/* ❤️ Like فوق الصورة */
+.like-form {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.like-btn {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 6px 14px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.like-btn:hover {
+    background: red;
+}
+.recipe-content {
+    max-width: 900px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.recipe-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.recipe-box h3 {
+    margin-bottom: 15px;
+    color: #ff9800;
+}
+
+.recipe-box ul,
+.recipe-box ol {
+    padding-left: 20px;
+}
+
+.recipe-box li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .recipe-content {
+        grid-template-columns: 1fr;
+    }
+}
+/* === FIX GLOBAL SPACE === */
+.recipe-detail-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 20px; /* بدل 100px ولا 80px */
+}
+
+/* IMAGE + LIKE */
+.recipe-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* IMAGE */
+.recipe-image-wrapper {
+    margin: 0 auto;
+}
+
+.recipe-image {
+    max-width: 700px;
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* LIKE BUTTON */
+.like-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;   /* ⬅️ هادي لي كانت دارت الفراغ */
+    background: #2f2f2f;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ING + INST */
+.recipe-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px; /* ⬅️ نقصناها */
+}
+
+/* BOX */
+.recipe-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+/* ❌ حيد أي فراغ زائد */
+.recipe-image-wrapper {
+    margin-bottom: 0 !important;
+}
+
+.like-btn {
+    margin-bottom: 0 !important;
+}
+
+/* ⬇️ قرب ING + INST للصورة */
+.recipe-content {
+    margin-top: 10px !important;
+}
+
+/* إذا كاين padding عام */
+.recipe-detail-container {
+    padding-top: 10px !important;
+}
+.recipe-content {
+    margin-top: 10px !important;
+}
+.recipe-content {
+    margin-top: 0 !important;
+}
+body {
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 40px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: white;
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== IMAGE ===== */
+.image-box {
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* ===== LIKE ICON ===== */
+.like-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.like-icon i {
+    color: red;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    margin-top: 25px;
+}
+
+.section h2 {
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.section ul,
+.section ol {
+    padding-left: 20px;
+}
+
+.section li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.section li i {
+    color: #ff9800;
+    margin-right: 6px;
+}body {
+    background: #f3f3f3;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 36px;
+}
+
+/* CARD */
+.card {
+    width: 500px;
+    background: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.image-box {
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* LIKE */
+.like-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* SECTIONS */
+.section {
+    margin-top: 25px;
+}
+
+.section h2 {
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.section ul,
+.section ol {
+    padding-left: 20px;
+}
+
+.section li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+/* ===========================
+   AUTH (LOGIN / REGISTER)
+   =========================== */
+
+/* BODY (غير إلا ما عندكش body ستايل من قبل) */
+body {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    min-height: 100vh;
+}
+
+/* CONTAINER */
+.auth-container {
+    background: #fff;
+    width: 420px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* TITLE */
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ff5722;
+}
+
+/* FORM */
+.auth-container form p {
+    margin-bottom: 15px;
+}
+
+/* INPUTS */
+.auth-container input[type="text"],
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.auth-container input:focus {
+    border-color: #ff5722;
+    outline: none;
+}
+
+/* BUTTON */
+.auth-container button {
+    width: 100%;
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.auth-container button:hover {
+    background: #e64a19;
+}
+
+/* LINKS */
+.auth-container a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #ff5722;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* ERRORS */
+.errorlist {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* HELP TEXT */
+.helptext {
+    font-size: 12px;
+    color: #777;
+}
+
+/* =========================
+   PAGE INSCRIPTION / LOGIN
+========================= */
+
+/* background blanc */
+.auth-page {
+    min-height: 100vh;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* carte au centre */
+.auth-card {
+    background: #ffffff;
+    width: 420px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* titre */
+.auth-card h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ff7a00;
+}
+
+/* labels */
+.auth-card label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* inputs */
+.auth-card input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* bouton */
+.auth-card button {
+    width: 100%;
+    background: #ff7a00;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: #e96d00;
+}
+
+/* lien login */
+.auth-card a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #ff7a00;
+    text-decoration: none;
+}
+
+.auth-card a:hover {
+    text-decoration: underline;
+}
+
+/* messages password django */
+.auth-card ul {
+    font-size: 13px;
+    color: #555;
+    padding-left: 18px;
+}
+.auth-page {
+    min-height: calc(100vh - 70px); /* طلعها لفوق شوية */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+.auth-card {
+    background: white;
+    padding: 30px 35px;   /* نقصنا الpadding */
+    width: 100%;
+    max-width: 420px;    /* كانت كبيرة → صغّرناها */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.auth-card h1 {
+    text-align: center;
+    color: #ff7a00;
+    margin-bottom: 25px;
+    font-size: 32px; /* كان كبير → صغّر شوية */
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 10px;   /* نقصنا الheight */
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 10px;
+    background: #ff7a00;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: #e66d00;
+}
+
+.auth-card a {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    color: #ff7a00;
+    text-decoration: none;
+}
+.auth-page {
+    min-height: calc(100vh - 90px); /* طلعها لفوق أكثر */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    padding-top: 20px;
+}
+
+.auth-card {
+    background: white;
+    padding: 25px 30px;   /* نقصنا الطول */
+    width: 100%;
+    max-width: 400px;    /* صغّرنا العرض */
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.auth-card h1 {
+    text-align: center;
+    color: #ff7a00;
+    margin-bottom: 20px;
+    font-size: 28px; /* صغّر العنوان */
+}
+
+.auth-card label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.auth-card ul {
+    font-size: 13px;   /* تصغير النص ديال password rules */
+    margin-bottom: 10px;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 10px;
+    background: #ff7a00;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.auth-card a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #ff7a00;
+    text-decoration: none;
+    font-size: 14px;
+}
+.auth-card {
+    background: white;
+    padding: 18px 22px;     /* صغّرنا padding */
+    width: 100%;
+    max-width: 340px;       /* صغّرنا العرض */
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+.auth-card h1 {
+    font-size: 24px;   /* كان كبير، صغّرناه */
+    margin-bottom: 15px;
+}
+.auth-card input {
+    padding: 8px;
+    font-size: 14px;
+}
+.auth-card ul {
+    font-size: 12px;
+    margin: 8px 0;
+}
+.auth-card button {
+    padding: 9px;
+    font-size: 14px;
+}
+/* AUTH PAGES */
+.auth-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+}
+
+.auth-card {
+    background: #fff;
+    width: 380px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.auth-card h2 {
+    text-align: center;
+    color: #ff8c00;
+    margin-bottom: 20px;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 10px;
+    background: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.auth-card a {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    color: #ff8c00;
+    font-size: 14px;
+}
+/* container dyal login & register */
+.auth-card {
+    max-width: 380px;   /* صغّر inscription */
+    margin: 60px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* title */
+.auth-card h2 {
+    text-align: center;
+    color: #ff8c00;
+    margin-bottom: 20px;
+}
+
+/* inputs */
+.auth-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* button */
+.auth-card button {
+    width: 100%;
+    padding: 10px;
+    background: #ff8c00;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: #e67e00;
+}
+
+/* links */
+.auth-card a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #ff8c00;
+    text-decoration: none;
+}
+.auth-card {
+    max-width: 320px;   /* أصغر */
+    padding: 20px;
+}
+
+.auth-card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.auth-card label {
+    font-size: 14px;
+}
+
+.auth-card input {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.auth-card ul,
+.auth-card small {
+    font-size: 12px;   /* تصغير النص ديال الشروط */
+}
+body {
+    background: #fff;
+}
+
+.navbar,
+.header,
+.search-section {
+    background: #fff !important;
+    color: #000;
+}
+
+.search-section h1 {
+    color: #000;
+}
+body {
+  background-color: white !important;
+}
+body {
+  background: #f5f5f5;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card img {
+  border-radius: 15px;
+}
+
+.btn-orange {
+  background: #f28c28;
+  color: white;
+  border-radius: 25px;
+}
+.page-title {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.search-form input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.search-form button {
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  background: orange;
+  color: white;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.recipe-card {
+  background: white;
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.recipe-card .btn {
+  background: orange;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(90deg, #ff9800, #ffb74d);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+body {
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  margin-top: 40px;
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.search-form input {
+  width: 350px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+}
+
+.search-form button {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+}
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.recipe-card h3 {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.recipe-card .btn {
+  background: #ff9800;
+  color: white;
+  border-radius: 25px;
+  padding: 8px 25px;
+}
+
+/* ===== HEADER TOP ===== */
+header,
+.navbar {
+  background-color: #ff9800;
+  padding: 15px 30px;
+}
+
+/* icons + text top */
+header a,
+.navbar a,
+header i {
+  color: white;
+}
+
+/* ===== SEARCH BAR ===== */
+.search-container {
+  background-color: #ff9800;
+  padding: 40px 0;
+}
+
+/* input */
+.search-container input {
+  border-radius: 50px;
+  padding: 18px 25px;
+  border: none;
+  width: 60%;
+}
+
+/* button rechercher */
+.search-container button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 35px;
+  font-weight: bold;
+}
+
+/* title */
+.search-container h1 {
+  color: white;
+}
+
+
+/* ===== TOP BAR ===== */
+.navbar {
+  background: linear-gradient(90deg, #ff9800, #ffb347);
+  padding: 15px 40px;
+}
+
+.navbar a {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* ===== SEARCH IN NAVBAR ===== */
+.navbar .search-input {
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  width: 260px;
+}
+
+.navbar .search-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+}
+
+/* buttons right */
+.navbar .btn {
+  border-radius: 50px;
+  font-weight: 500;
+}
+/* ===== TOP BAR ===== */
+.navbar {
+  background: linear-gradient(90deg, #ff9800, #ffb347);
+  padding: 15px 40px;
+}
+
+.navbar a {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* ===== SEARCH IN NAVBAR ===== */
+.navbar .search-input {
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  width: 260px;
+}
+
+.navbar .search-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+}
+
+/* buttons right */
+.navbar .btn {
+  border-radius: 50px;
+  font-weight: 500;
+}
+/* ===== TOP BAR ===== */
+.navbar {
+  background: linear-gradient(90deg, #ff9800, #ffb347);
+  padding: 15px 40px;
+}
+
+.navbar a {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* ===== SEARCH IN NAVBAR ===== */
+.navbar .search-input {
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  width: 260px;
+}
+
+.navbar .search-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+}
+
+/* buttons right */
+.navbar .btn {
+  border-radius: 50px;
+  font-weight: 500;
+}
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(90deg, #ff9800, #ffb74d);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+    font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+    opacity: 0.9;
+}
+
+/* Buttons */
+.navbar .btn {
+    border-radius: 20px;
+    font-weight: 600;
+}
+/* FIX NAVBAR */
+.navbar {
+    background-color: #ff9800 !important;
+    height: 70px;
+}
+
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.25);
+    padding: 8px 14px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.logout-btn {
+    background: white;
+    color: #ff9800;
+    padding: 6px 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background: #fff3e0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff9800;
+    padding: 12px 30px;
+}
+
+.nav-left a,
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+.btn-add {
+    background: white;
+    color: #ff9800;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.btn-add:hover {
+    background: #ffe0b2;
+}
+
+.profile-link {
+    margin-right: 10px;
+}
+
+.btn-logout {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn-add-recipe {
+    color: black !important;
+}
+.btn-add-recipe {
+    color: #000 !important; /* الكتابة كحلة */
+}
+.btn-add-recipe {
+    color: #000 !important;
+}
+
+/* Reset بسيط */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f6fa;
+}
+
+/* Container ديال الصفحة */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* العنوان */
+h1 {
+  text-align: center;
+  color: #e67e22;
+  margin-bottom: 30px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs و Textarea */
+input[type="text"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Hover & focus */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #e67e22;
+  box-shadow: 0 0 5px rgba(230,126,34,0.4);
+}
+
+/* Bouton Enregistrer */
+button,
+input[type="submit"] {
+  width: 100%;
+  background: #e67e22;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #d35400;
+}
+
+/* Image upload text */
+.file-info {
+  font-size: 13px;
+  color: #777;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+/* ====== Formulaire de changement de mot de passe ====== */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #af7a4c;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #a07145;
+}
+
+/* ====== Lien retour au profil ====== */
+a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #333;
+}
+
+/* ====== Titres ====== */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* ====== Message succès ====== */
+p.success {
+    text-align: center;
+    color: #af7d4c;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.search-input {
+  width: 220px;   /* نقص أو زيد على حسابك */
+  height: 38px;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 0 15px;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-add-recipe {
+  background-color: #ff9800;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+/* Bouton + Ajouter recette */
+.btn-add-recipe {
+  width: 38px;
+  height: 38px;
+  background-color: #ffffff;
+  color: #ff9800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 12px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-add-recipe:hover {
+  background-color: #ffe0b2;
+  color: #e65100;
+}
+
+/* Cards recettes (Accueil) */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.recipe-card {
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.recipe-card img {
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.recipe-card h3 {
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .recipes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.btn-add-recipe {
+  font-weight: 700;
+  color: #ff9800 !important;
+  background-color: white !important;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 !important;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-recipe:hover {
+  background-color: #ffe0b2 !important;
+  color: #e65100 !important;
+}
+.page-container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.page-title{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.search-form{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.search-form input{
+    padding:10px;
+    width:260px;
+    border-radius:20px;
+    border:1px solid #ccc;
+}
+
+.search-form button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:20px;
+}
+
+.filters{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.filter-btn{
+    border:1px solid #ff9800;
+    color:#ff9800;
+    padding:6px 16px;
+    border-radius:20px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.filter-btn:hover{
+    background:#ff9800;
+    color:white;
+}
+
+.recipes-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.recipe-card{
+    background:white;
+    padding:15px;
+    border-radius:16px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.recipe-card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.btn-recipe{
+    display:inline-block;
+    margin-top:10px;
+    background:#ff9800;
+    color:white;
+    padding:8px 16px;
+    border-radius:20px;
+    text-decoration:none;
+}
+
+.no-recipes{
+    text-align:center;
+    grid-column:1/-1;
+}
+.search-page{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.search-box{
+    background:white;
+    padding:50px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    width:80%;
+    max-width:900px;
+    text-align:center;
+}
+
+.search-box h1{
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.modern-search{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.modern-search input{
+    width:260px;
+    padding:14px 20px;
+    border-radius:16px;
+    border:1px solid #ddd;
+    font-size:16px;
+}
+
+.modern-search button{
+    background:#ff9800;
+    border:none;
+    color:white;
+    padding:14px 40px;
+    border-radius:30px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.modern-filters{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    font-size:18px;
+}
+
+.modern-filters a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+}
+
+.recipes-grid{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.modern-card{
+    background:white;
+    border-radius:22px;
+    padding:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.modern-card img{
+    width:100%;
+    height:160px;
+    border-radius:16px;
+    object-fit:cover;
+}
+
+.modern-card h3{
+    margin:15px 0;
+}
+
+.view-btn{
+    background:#ff9800;
+    color:white;
+    padding:8px 18px;
+    border-radius:20px;
+    text-decoration:none;
+}
+.modern-card img,
+.recipe-card img{
+    width:100%;
+    height:100px;      /* الحجم المثالي */
+    object-fit:cover; /* يقص الصورة بلا تشويه */
+    border-radius:16px;
+}
+/* GRID مضبوط */
+.recipes-grid{
+    max-width:1100px;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    gap:24px;
+}
+
+/* CARD حقيقية */
+.modern-card{
+    background:white;
+    border-radius:22px;
+    padding:14px;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+    overflow:hidden;
+    transition:.3s;
+}
+
+.modern-card:hover{
+    transform:translateY(-4px);
+}
+
+/* IMAGE متحكمة */
+.recipes-container {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 10px;
+}
+
+
+/* TITLE */
+.modern-card h3{
+    margin:12px 0 8px;
+    font-size:18px;
+}
+
+/* BUTTON */
+.view-btn{
+    display:inline-block;
+    background:#ff9800;
+    color:white;
+    padding:8px 16px;
+    border-radius:20px;
+    text-decoration:none;
+    font-size:14px;
+}
+/* FORCE GRID */
+.recipes-grid{
+    display:grid !important;
+    grid-template-columns: repeat(4,1fr) !important;
+    gap:25px !important;
+    max-width:1100px;
+    margin:60px auto;
+}
+
+/* FORCE CARD */
+.modern-card{
+    width:100% !important;
+    max-width:100% !important;
+    overflow:hidden !important;
+    border-radius:20px;
+    background:#fff;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+/* FORCE IMAGE SIZE */
+.modern-card img{
+    width:100% !important;
+    height:150px !important;
+    object-fit:cover !important;
+    display:block !important;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+    .recipes-grid{grid-template-columns:repeat(2,1fr)!important;}
+}
+@media(max-width:500px){
+    .recipes-grid{grid-template-columns:1fr!important;}
+}
+.recipe-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    max-width: 260px;
+    margin: auto;
+}
+
+.recipe-card:hover {
+    transform: translateY(-6px);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+.recipe-card h5 {
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.recipe-card a {
+    display: block;
+    margin: 10px auto 15px;
+    width: 80%;
+    text-align: center;
+    background: #ff9800;
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+
+    height: 100%;
+}
+
+/* المسافة بين الصور */
+.recipe-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* العنوان */
+.recipe-card h5 {
+    margin: 10px 0 15px;
+    font-weight: 600;
+}
+
+/* الزر */
+.recipe-card a {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* hover جميل */
+.recipe-card:hover {
+    transform: translateY(-8px);
+}
+.recipe-card {
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.recipe-card h5 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.recipe-card a {
+    background: #ff9800;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.recipe-card:hover {
+    transform: translateY(-8px);
+}
+.recipes-section {
+  margin-top: 0;
+  padding-top: 0;
+}
+.recipes-container {
+  margin-top: 10px;
+  padding-top: 0;
+}
+.recipes-container {
+  margin-top: 10px !important;
+}
+.page,
+.content {
+  background: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+.recipes-container {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+}
+.recipes-container {
+  margin-top: 15px;
+}
+.page,
+.content {
+  all: unset;
+  display: block;
+}
+.page,
+.content {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: auto !important;
+  box-shadow: none !important;
+}
+.page,
+.content {
+  all: initial;
+  display: block;
+  width: 100%;
+}
+.recipes-container {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 10px;
+}
+.page {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  min-height: auto;
+  box-shadow: none;
+}
+
+.content {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  min-height: auto;
+  box-shadow: none;
+}
+.page:not(.recipes-container),
+.content:not(.recipes-container) {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.container {
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+.recipes-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-top: 20px;
+}
+input {
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+
+
+

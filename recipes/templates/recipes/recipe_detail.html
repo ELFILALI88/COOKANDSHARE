@@ -1,22 +1,82 @@
-<h1>{{ recipe.title }}</h1>
+{% extends 'base.html' %}
+{% load static %}
 
-{% if recipe.image %}
-  <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" style="max-width:300px;">
-{% else %}
-  <p>Aucune image disponible</p>
-{% endif %}
+{% block content %}
+<div class="recipe-detail-container">
 
-<p><strong>Ingrédients :</strong></p>
-<p>{{ recipe.ingredients }}</p>
+    <!-- 🧾 TITLE -->
+    <h1 class="recipe-title">{{ recipe.title }}</h1>
 
-<p><strong>Instructions :</strong></p>
-<p>{{ recipe.instructions }}</p>
+    <!-- 🖼️ IMAGE + LIKE -->
+    {% if recipe.image %}
+    <div class="recipe-image-wrapper">
 
-<p><strong>Auteur :</strong> {{ recipe.author }}</p>
+        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recipe-image">
 
-<a href="{% url 'recipe_list' %}">⬅ Retour à la liste</a>
+        <!-- ❤️ LIKE OVER IMAGE -->
+        <form method="POST" action="{% url 'like_recipe' recipe.id %}" class="like-overlay">
+            {% csrf_token %}
+            <button type="submit" class="like-circle">
+                ❤️ <span>{{ recipe.total_likes }}</span>
+            </button>
+        </form>
 
-{% if recipe.author == user %}
-  <a href="{% url 'recipe_edit' recipe.id %}">Modifier</a>
-  <a href="{% url 'recipe_delete' recipe.id %}">Supprimer</a>
-{% endif %}
+    </div>
+    {% endif %}
+
+    <!-- 📦 INGREDIENTS + INSTRUCTIONS -->
+    <div class="recipe-sections">
+
+        <!-- 🧺 INGREDIENTS -->
+        <div class="recipe-box">
+            <h3>🧺 Ingrédients</h3>
+            <ul>
+                {% for ing in recipe.ingredients.splitlines %}
+                    {% if ing %}
+                        <li>{{ ing }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- 👨‍🍳 INSTRUCTIONS -->
+        <div class="recipe-box">
+            <h3>👨‍🍳 Instructions</h3>
+            <ol>
+                {% for step in instructions_list %}
+                    {% if step %}
+                        <li>{{ step }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ol>
+        </div>
+
+    </div>
+
+    <!-- 💬 COMMENTS -->
+    <div class="comments-section">
+        <h3>💬 Commentaires ({{ recipe.comments.count }})</h3>
+
+        {% for comment in recipe.comments.all %}
+            <div class="comment">
+                <strong>{{ comment.user.username }}</strong>
+                <p>{{ comment.content }}</p>
+                <small>{{ comment.created_at|date:"d M Y H:i" }}</small>
+            </div>
+        {% empty %}
+            <p>Aucun commentaire</p>
+        {% endfor %}
+
+        {% if user.is_authenticated %}
+            <form method="POST" action="{% url 'add_comment' recipe.id %}" class="comment-form">
+                {% csrf_token %}
+                <textarea name="content" placeholder="Écrire un commentaire..." required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        {% else %}
+            <p>🔒 Connectez-vous pour commenter</p>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}

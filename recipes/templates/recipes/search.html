@@ -1,26 +1,47 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Recherche</title>
-</head>
-<body>
-    <h1>Recherche des recettes</h1>
+<div class="container mt-4">
 
-    <form method="get">
-        <input type="text" name="q" placeholder="Chercher une recette" value="{{ query }}">
-        <button type="submit">Rechercher</button>
+    <h1 class="mb-4">Recherche des recettes</h1>
+
+    <!-- 🔍 Barre de recherche -->
+    <form method="GET" action="{% url 'search_recipes' %}" class="d-flex mb-4">
+        <input
+            type="text"
+            name="q"
+            placeholder="Rechercher une recette..."
+            value="{{ request.GET.q }}"
+            class="form-control me-2"
+        >
+        <button type="submit" class="btn btn-orange">Rechercher</button>
     </form>
 
-    <hr>
+    <!-- 📋 Liste des recettes -->
+    {% if recipes %}
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        {% for recipe in recipes %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                {% if recipe.image %}
+                    <img src="{{ recipe.image.url }}" class="card-img-top" alt="{{ recipe.title }}" style="height:200px; object-fit:cover;">
+                {% else %}
+                    <img src="{% static 'images/default.jpg' %}" class="card-img-top" style="height:200px; object-fit:cover;" alt="No image">
+                {% endif %}
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ recipe.title }}</h5>
+                    <a href="{% url 'recipe_detail' recipe.id %}" class="btn btn-orange mt-auto">Voir la recette</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+        <p class="no-recipes">Aucune recette trouvée 😢</p>
+    {% endif %}
 
-    {% for recipe in recipes %}
-        <p>{{ recipe.title }}</p>
-    {% empty %}
-        <p>Aucune recette trouvée</p>
-    {% endfor %}
-</body>
-</html>
+</div>
+
 {% endblock %}

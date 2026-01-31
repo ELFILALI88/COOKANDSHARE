@@ -1,14 +1,35 @@
-
-
-
 {% extends 'base.html' %}
 {% block content %}
 
-<h2>Connexion</h2>
+<div class="d-flex justify-content-center align-items-center" style="min-height:70vh;">
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Se connecter</button>
-</form>
+  <div class="bg-white p-4 rounded-4 shadow-sm" style="width:360px;">
+
+    <h3 class="text-center fw-bold mb-4">🔐 Connexion</h3>
+
+    <form method="post" class="d-flex flex-column gap-3">
+      {% csrf_token %}
+
+      {{ form.username.label_tag }}
+      {{ form.username }}
+
+      {{ form.password.label_tag }}
+      {{ form.password }}
+
+      <button class="btn btn-warning rounded-pill fw-semibold">
+        Se connecter
+      </button>
+    </form>
+
+    <p class="text-center mt-3 mb-0">
+      Pas de compte ?
+      <a href="{% url 'register' %}" class="fw-semibold text-decoration-none">
+        Créer un compte
+      </a>
+    </p>
+
+  </div>
+
+</div>
+
 {% endblock %}

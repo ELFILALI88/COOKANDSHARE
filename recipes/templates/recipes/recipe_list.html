@@ -1,23 +1,42 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 
+<div class="container my-5">
 
-<h1>Liste des recettes</h1>
-<a href="{% url 'add_recipe' %}">➕ Ajouter une recette</a>
-<ul>
-  {% for recipe in recipes %}
-    <li>
-      <a href="{% url 'recipe_detail' recipe.id %}">
-        {{ recipe.title }}
-      </a>
-      {% if recipe.image %}
-        <br>
-        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" width="100">
-      {% endif %}
-    </li>
-  {% empty %}
-    <li>Aucune recette pour le moment.</li>
-  {% endfor %}
-</ul>
-<a href="{% url 'search_recipes' %}">🔍 Rechercher une recette</a>
+    <h2 class="text-center mb-5 fw-bold">
+        🍽️ Nos Recettes
+    </h2>
+
+    <div class="row g-5 justify-content-center">
+
+        {% for recipe in recipes %}
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+
+            <div class="recipe-card">
+
+                {% if recipe.image %}
+                    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
+                {% else %}
+                    <img src="{% static 'images/default.jpg' %}" alt="image">
+                {% endif %}
+
+                <h5>{{ recipe.title }}</h5>
+
+                <a href="{% url 'recipe_detail' recipe.id %}">
+                    Voir la recette
+                </a>
+
+            </div>
+
+        </div>
+        {% empty %}
+            <p class="text-center fs-5">Aucune recette trouvée 😢</p>
+        {% endfor %}
+
+    </div>
+
+</div>
+
 {% endblock %}
